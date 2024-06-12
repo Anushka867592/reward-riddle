@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgba(65, 105, 225, 0.7); /* Royal Blue with 70% opacity */
+            text-align: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%; /* Optional: Round image corners */
+            margin-bottom: 20px;
+        }
+        input, button {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Page 2</h1>
+        <img src="aaradhya.jpg" alt="this is the person whom we know as raja ji">
+        <p>Who is this person?</p>
+        <input type="text" id="answer" placeholder="aaradhya">
+        <button onclick="checkAnswer()">Submit</button>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            var answer = document.getElementById('answer').value.toLowerCase();
+            // Replace 'elon musk' with the correct answer
+            if (answer === 'aaradhya') {
+                alert('Correct! Proceeding to the next page.');
+                window.location.href = 'page3.html';
+            } else {
+                alert('Incorrect answer. Try again!');
+            }
+        }
+    </script>
+</body>
+</html>
